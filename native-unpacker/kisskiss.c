@@ -1,7 +1,7 @@
 /*
  * Unpacker for various Android packers/protectors
  *
- * Tim 'diff' Strazzere <diff@lookout.com>
+ * Tim 'diff' Strazzere <strazz@gmail.com>
  *"
  * For education use only - find them malwares
  *
@@ -28,7 +28,7 @@
 
 int main(int argc, char *argv[]) {
 
-  printf("[*] Android Dalvik Unpacker/Unprotector - <diff@lookout.com>\n");
+  printf("[*] Android Dalvik Unpacker/Unprotector - <strazz@gmail.com>\n");
 
   if(argc <= 0) {
     printf(" [!] Nothing to unpack, quitting\n");
@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 
   int mem_file = attach_get_memory(clone_pid);
   if(mem_file == -1) {
-    printf(" [!] An error occured attaching and finding the memory!\n");
+    printf(" [!] An error occurred attaching and finding the memory!\n");
     return -1;
   }
 
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
   char *dumped_file_name = malloc(strlen(static_safe_location) + strlen(package_name) + strlen(suffix));
   sprintf(dumped_file_name, "%s%s%s", static_safe_location, package_name, suffix);
   if(dump_memory(mem_file, &memory, dumped_file_name) <= 0) {
-    printf(" [!] An issue occured trying to dump the memory to a file!\n");
+    printf(" [!] An issue occurred trying to dump the memory to a file!\n");
     return -1;
   }
   printf(" [+] Unpacked/protected file dumped to : %s\n", dumped_file_name);

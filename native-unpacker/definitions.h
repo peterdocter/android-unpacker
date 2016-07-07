@@ -1,7 +1,7 @@
 /*
  * Header file for the definitions of packers/protectors
  *
- * Tim "diff" Strazzere <diff@lookout.com>
+ * Tim "diff" Strazzere <strazz@gmail.com>
  */
 
 typedef struct {
@@ -20,6 +20,14 @@ static packer packers[] = {
     // This is actually the filter APKProtect uses itself for finding it's own odex to modify
     ".apk@",
     "/libAPKProtect"
+  },
+
+  // Bangcle (??) or something equally silly
+  {
+    "Bangcle (??) silly version",
+    "Something silly used by malware",
+    "/app_lib/classes.dex",
+    "/app_lib/"
   },
 
   // LIAPP
